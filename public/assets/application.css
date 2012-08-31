@@ -1,0 +1,672 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/*@import "susy"*/
+/* line 16, ../../app/assets/stylesheets/_mixins.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 6, ../../app/assets/stylesheets/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+/* line 11, ../../app/assets/stylesheets/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 91, ../../app/assets/stylesheets/_mixins.scss */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 273, ../../app/assets/stylesheets/_mixins.scss */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/* line 29, ../../app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 35, ../../app/assets/stylesheets/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 41, ../../app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 45, ../../app/assets/stylesheets/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+/* line 59, ../../app/assets/stylesheets/_normalize.scss */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 69, ../../app/assets/stylesheets/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+  color: #222;
+}
+
+/* line 74, ../../app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 86, ../../app/assets/stylesheets/_normalize.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 91, ../../app/assets/stylesheets/_normalize.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/* line 101, ../../app/assets/stylesheets/_normalize.scss */
+a {
+  color: #00e;
+}
+
+/* line 105, ../../app/assets/stylesheets/_normalize.scss */
+a:visited {
+  color: #551a8b;
+}
+
+/* line 109, ../../app/assets/stylesheets/_normalize.scss */
+a:hover {
+  color: #06e;
+}
+
+/* line 113, ../../app/assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improve readability when focused and hovered in all browsers: h5bp.com/h
+ */
+/* line 122, ../../app/assets/stylesheets/_normalize.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/* line 131, ../../app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 136, ../../app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 140, ../../app/assets/stylesheets/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 144, ../../app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 148, ../../app/assets/stylesheets/_normalize.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 157, ../../app/assets/stylesheets/_normalize.scss */
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 163, ../../app/assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*
+ * Redeclare monospace font family: h5bp.com/j
+ */
+/* line 177, ../../app/assets/stylesheets/_normalize.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text
+ */
+/* line 187, ../../app/assets/stylesheets/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 193, ../../app/assets/stylesheets/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/* line 198, ../../app/assets/stylesheets/_normalize.scss */
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* line 203, ../../app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 85%;
+}
+
+/*
+ * Position subscript and superscript content without affecting line-height: h5bp.com/k
+ */
+/* line 212, ../../app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 219, ../../app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 223, ../../app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* line 233, ../../app/assets/stylesheets/_normalize.scss */
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 238, ../../app/assets/stylesheets/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 243, ../../app/assets/stylesheets/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+/* line 260, ../../app/assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+/* line 270, ../../app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/* line 279, ../../app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/* line 288, ../../app/assets/stylesheets/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/* line 292, ../../app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Indicate that 'label' will shift focus to the associated form element
+ */
+/* line 302, ../../app/assets/stylesheets/_normalize.scss */
+label {
+  cursor: pointer;
+}
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+/* line 311, ../../app/assets/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+/* line 327, ../../app/assets/stylesheets/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+/* line 339, ../../app/assets/stylesheets/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+/* line 352, ../../app/assets/stylesheets/_normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+/* line 363, ../../app/assets/stylesheets/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * Consistent box sizing and appearance
+ */
+/* line 372, ../../app/assets/stylesheets/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+
+/* line 379, ../../app/assets/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 387, ../../app/assets/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+/* line 396, ../../app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+/* line 406, ../../app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* line 417, ../../app/assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 422, ../../app/assets/stylesheets/_normalize.scss */
+td {
+  vertical-align: top;
+}
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+/* line 431, ../../app/assets/stylesheets/_normalize.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==|== primary styles =====================================================
+   Author:
+   ========================================================================== */
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 478, ../../app/assets/stylesheets/_normalize.scss */
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 490, ../../app/assets/stylesheets/_normalize.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 499, ../../app/assets/stylesheets/_normalize.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 516, ../../app/assets/stylesheets/_normalize.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 529, ../../app/assets/stylesheets/_normalize.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+/* line 538, ../../app/assets/stylesheets/_normalize.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 543, ../../app/assets/stylesheets/_normalize.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 547, ../../app/assets/stylesheets/_normalize.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 559, ../../app/assets/stylesheets/_normalize.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 567, ../../app/assets/stylesheets/_normalize.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 571, ../../app/assets/stylesheets/_normalize.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 575, ../../app/assets/stylesheets/_normalize.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 585, ../../app/assets/stylesheets/_normalize.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 590, ../../app/assets/stylesheets/_normalize.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 595, ../../app/assets/stylesheets/_normalize.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 600, ../../app/assets/stylesheets/_normalize.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 604, ../../app/assets/stylesheets/_normalize.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 614, ../../app/assets/stylesheets/_normalize.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 620, ../../app/assets/stylesheets/_normalize.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

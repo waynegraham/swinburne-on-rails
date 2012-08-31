@@ -27,10 +27,14 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'guard-rails-assets'
+  gem 'guard-livereload'
   gem 'rspec-rails'
   gem 'spork-rails'
   gem 'spork', '~> 1.0rc'
   gem "capybara"
+
+  gem "susy"
 end
 
 group :test do

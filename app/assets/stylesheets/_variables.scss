@@ -1,0 +1,108 @@
+// Global values
+
+// Grays
+// -----------------
+$black:       #000 !default;
+$grayDarker:  #222 !default;
+$grayDark:    #333 !default;
+$gray:        #111 !default;
+$grayLight:   #999 !default;
+$grayLighter: #eee !default;
+$white:       #eee !default;
+
+// accent color
+// -----------------
+$blue:        #049cdb !default;
+$darkblue:    #0064cd !default;
+$green:       #46a546 !default;
+$red:         #9d261d !default;
+$yellow:      #ffc40d !default;
+$orange:      #f89406 !default;
+$pink:        #c3325f !default;
+$purple:      #7a43b6 !default;
+
+$bodyBackground: $white !default;
+$textColor:      $grayDark !default;
+
+// links
+$linkColor: #08c !default;
+$linkColorHover: darken($linkColor, 15%) !default;
+
+// Typography
+$sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif
+!default;
+$serifFontFamily: Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily: Menlo, Monaco, Consolas, "Courier New", monospace
+!default;
+
+$baseFontSize: 13px !default;
+$baseFontFamily: $sansFontFamily !default;
+$baseLineHeight: 18px !default;
+$altFontFamily: $serifFontFamily !default;
+
+$headingsFontFamily: inherit !default; // emtpy to use BS default
+$headingsFontWeight: bold !default; // use bold
+$headingsColor: inherit !default;
+
+// Forms
+// -------------------------
+$inputBackground:               $white !default;
+$inputBorder:                   #ccc !default;
+$inputBorderRadius:             3px !default;
+$inputDisabledBackground:       $grayLighter !default;
+$formActionsBackground:         #f5f5f5 !default;
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkBackgroundHover:   $linkColor !default;
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000 !default;
+$zindexPopover:           1010 !default;
+$zindexTooltip:           1020 !default;
+$zindexFixedNavbar:       1030 !default;
+$zindexModalBackdrop:     1040 !default;
+$zindexModal:             1050 !default;
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight !default;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter !default;
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853 !default;
+$warningBackground:       #fcf8e3 !default;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
+
+$errorText:               #b94a48 !default;
+$errorBackground:         #f2dede !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+
+$successText:             #468847 !default;
+$successBackground:       #dff0d8 !default;
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
+
+$infoText:                #3a87ad !default;
+$infoBackground:          #d9edf7 !default;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
+
+// -------------------------
+$gridColumns:             12 !default;
+$gridColumnWidth:         60px !default;
+$gridGutterWidth:         20px !default;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
