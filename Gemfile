@@ -29,8 +29,11 @@ group :development, :test do
   gem 'guard-spork'
   gem 'rspec-rails'
   gem 'spork'
-  gem 'cucumber-rails'
   gem "capybara"
+end
+
+group :test do
+  gem 'cucumber-rails'
 end
 
 # To use ActiveModel has_secure_password
