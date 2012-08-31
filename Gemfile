@@ -22,6 +22,17 @@ end
 
 gem 'jquery-rails'
 
+group :development, :test do
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'cucumber-rails'
+  gem "capybara"
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
