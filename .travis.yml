@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 1.9.3
+env:
+  - DB=sqlite
+  - DB=postgresql
+before_script:
+  - mysql -e 'create database swinburn-on-rails_test'
+  - psql -c 'create database swinburn-on-rails_test' -U postgres

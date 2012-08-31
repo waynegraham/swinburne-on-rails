@@ -28,12 +28,14 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rspec-rails'
-  gem 'spork'
+  gem 'spork-rails'
+  gem 'spork', '~> 1.0rc'
   gem "capybara"
 end
 
 group :test do
   gem 'cucumber-rails'
+  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password
