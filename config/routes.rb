@@ -1,4 +1,8 @@
 SwinburneOnRails::Application.routes.draw do
+
+  get "pages/index", :as => :home
+  get "pages/about", :as => :about
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

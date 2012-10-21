@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Swinburne On Rails</title>
-
+<title><%= title %></title>
 <meta name="viewport" content="width=device-width">
 <%= stylesheet_link_tag    "application", :media => "all" %>
 <%= javascript_include_tag "application" %>
@@ -18,20 +17,15 @@
 
 <div id="container">
 
-  <header role="banner">
-
-  </header>
-  <nav id="nav-primary">
-    <!-- navigation -->
-  </nav>
+  <%= render 'layouts/flashmessages'%>
 
   <div id="main" role="main">
+    <%= render 'layouts/flashmessages'%>
+
     <%= yield %>
   </div>
 
-  <footer role="footer">
-    
-  </footer>
+ <%= render 'layouts/footer'%>
 </div>
 </body>
 </html>

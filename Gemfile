@@ -18,9 +18,22 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails'
+  gem 'susy'
 end
 
 gem 'jquery-rails'
+gem 'thin'
+gem 'nokogiri'
+
+group :production do
+  gem 'pg'
+end
+
+group :development do
+  gem 'foreman'
+  gem 'growl'
+end
 
 group :development, :test do
   gem 'guard'
@@ -33,13 +46,13 @@ group :development, :test do
   gem 'spork-rails'
   gem 'spork', '~> 1.0rc'
   gem "capybara"
-
-  gem "susy"
 end
 
 group :test do
   gem 'cucumber-rails'
-  gem 'pg'
+  gem 'turn', :require => false
+  gem 'jasmine-jquery-rails'
+  gem 'database_cleaner'
 end
 
 # To use ActiveModel has_secure_password
