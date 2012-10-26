@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 gem 'thin'
 gem 'nokogiri'
+gem 'curb'
 
 group :production do
   gem 'pg'

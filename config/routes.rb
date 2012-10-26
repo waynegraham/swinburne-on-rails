@@ -1,5 +1,11 @@
 SwinburneOnRails::Application.routes.draw do
 
+  resources :editions
+
+  resources :witnesses
+
+  resources :openings
+
   get "pages/index", :as => :home
   get "pages/about", :as => :about
   
