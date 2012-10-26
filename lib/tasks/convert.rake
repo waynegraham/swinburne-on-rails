@@ -2,6 +2,21 @@
 # Tasks for converting TEI XML
 
 require 'curb'
+require 'nokogiri'
+
+namespace :convert do
+  desc 'Transform openings'
+  task :openings do
+    path = File.expand_path('lib/assets')
+    xml_file = path + '/swinburne.xml'
+    xsl_file = path + '/openings.xsl'
+
+    doc = Nokogiri::XML(File.read(xml_file))
+    xsl = Nokogiri::XSLT(File.read(xsl_file))
+
+    puts xsl.transform(doc)
+  end
+end
 
 namespace :remote_file do
 
@@ -13,7 +28,6 @@ namespace :remote_file do
 
     uri = 'https://raw.github.com/nowviskie/Swinburne/master/xml/base.xml'
 
-    Curl::Easy.new('https://raw.github.com/nowviskie/Swinburne/master/xml/base.xml')
     curl_response = Curl::Easy.http_get(uri) do |c|
       c.on_complete do |curl_response|
         encoding = 'UTF-8'
