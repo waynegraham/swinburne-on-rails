@@ -7,14 +7,32 @@ require 'nokogiri'
 namespace :convert do
   desc 'Transform openings'
   task :openings do
+    puts "Reading file"
+
     path = File.expand_path('lib/assets')
     xml_file = path + '/swinburne.xml'
     xsl_file = path + '/openings.xsl'
 
-    doc = Nokogiri::XML(File.read(xml_file))
+        doc = Nokogiri::XML(File.read(xml_file))
+    puts "Converting Openings"
     xsl = Nokogiri::XSLT(File.read(xsl_file))
 
-    puts xsl.transform(doc)
+    openings = xsl.transform(doc)
+
+    puts "Generating application openings..."
+
+
+    openings.xpath('//div[@class = "opening"]').each do |opening|
+      verso = opening.xpath('//div[@class="verso"]')
+      recto = opening.xpath('//div[@class="recto"]')
+      #running_title = ''
+      #verso_page_number = opening.xpath('//span[@class="page_number"]').first
+
+      #recto_page_number = opening.xpath('//span[@class="page_number"]').
+
+      
+      Opening.create(verso: verso, recto: recto)
+    end
   end
 end
 
