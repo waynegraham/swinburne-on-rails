@@ -6,14 +6,14 @@ require 'nokogiri'
 
 namespace :convert do
   desc 'Transform openings'
-  task :openings do
+  task :openings => :environment do
     puts "Reading file"
 
     path = File.expand_path('lib/assets')
     xml_file = path + '/swinburne.xml'
     xsl_file = path + '/openings.xsl'
 
-        doc = Nokogiri::XML(File.read(xml_file))
+    doc = Nokogiri::XML(File.read(xml_file))
     puts "Converting Openings"
     xsl = Nokogiri::XSLT(File.read(xsl_file))
 
@@ -21,17 +21,21 @@ namespace :convert do
 
     puts "Generating application openings..."
 
+    openings.xpath('div[@class = "opening"]').each do |opening|
+      verso = opening.xpath('child::div[@class="verso"]')
+      recto = opening.xpath('child::div[@class="recto"]')
+      #running_title = opening.xpath('h1').text
+      verso_page_number = verso.xpath('span[@class="page_number"]').text
+      recto_page_number = recto.xpath('span[@class="page_number"]').text
 
-    openings.xpath('//div[@class = "opening"]').each do |opening|
-      verso = opening.xpath('//div[@class="verso"]')
-      recto = opening.xpath('//div[@class="recto"]')
-      #running_title = ''
-      #verso_page_number = opening.xpath('//span[@class="page_number"]').first
+      puts "Converting pages #{verso_page_number} and #{verso_page_number}"
+      Opening.create(
+        verso: verso,
+        recto: recto,
+        verso_page_number: verso_page_number,
+        recto_page_number: recto_page_number
+      )
 
-      #recto_page_number = opening.xpath('//span[@class="page_number"]').
-
-      
-      Opening.create(verso: verso, recto: recto)
     end
   end
 end

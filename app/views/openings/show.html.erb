@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<div class="opening">
+  <div class="verso">
+    <%= @opening.verso %>
+  </div>
+  <div class="recto">
+    <%= @opening.recto %>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_opening_path(@opening) %> |
 <%= link_to 'Back', openings_path %>
