@@ -1,32 +1,39 @@
 <footer>
-  <div class="container">
-    <%= link_to root_path %>
-    <p>Our mission is to bring the future to critical editions</p>
+  <%= link_to root_path %>
+  <p>Our mission is to bring the future to critical editions</p>
 
-    <div class="horizontal-links">
-      <ul>
-        <li>Editions</li>
-        <li><a href="moxen">Moxen</a></li>
-        <li><a href="hotten">Hotten</a></li>
-      </ul>
+  <div class="horizontal-links clearfix">
+    <ul>
+      <li>Editions</li>
+      <li><a href="moxen">Moxen</a></li>
+      <li><a href="hotten">Hotten</a></li>
+    </ul>
 
-      <ul>
-        <li>Navigation</li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li>Navigation</li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+     <a href="https://twitter.com/" class="twitter-link">Follow us on Twitter</a>
 
-    <a href="https://twitter.com/" class="twitter-link">Follow us on Twitter</a>
   </div>
 
-  <div class="logo">
-    <a class="waynebot-badge" href="#"></a>
+ 
+  <div class="logo clearfix">
+    <a class="waynebot-badge" href="#">
+      <%= image_tag('waynebot.png') %>
+    </a>
     <h2><a href="#">Built by Waynebot</a></h2>
   </div>
 
-  <div class="copyright">
+  <div class="copyright clearfix">
     <p>Edited with all the love in the world by <a href="https://twitter.com/nowviskie">nowviskie</a>.</p>
-    <p><a href="https://github.com/waynegraham/swinburne-on-rails">Source code</a> licenced under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>. Content licenced under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons BY-NC-SA 3.0</a>.</p>
+    <p>
+    <%= link_to 'Source code', 'https://github.com/waynegraham/swinburne-on-rails' %>
+    licenced under 
+    <%= link_to 'Apache License v2.0', 'http://www.apache.org/licenses/LICENSE-2.0' %>.
+    Content licenced under
+    <%= link_to 'Creative Commons  BY-NC-SA 3.0', 'http://creativecommons.org/licenses/by-nc-sa/3.0/' %>.
+    </p>
   </div>
-</footer>
+  <footer>
