@@ -1,35 +1,36 @@
 <div class="hero-unit">
 
-    <h1>Swinburne on Rails</h1>
-    <h2>A Critical Edition for the 21st century</h2>
-    <ul>
-      <li class="float-up edition-box">
-        <p>Critical Edition</p>
-        <p>Read the edition as Swinburne intended</p>
-      </li>
-      <li class="apparatus-box">
-        <p>Apparatus</p>
-        <p>Critical apparatus.</p>
-      </li>
-      <li class="float-up notes-box">
-        <p>Notes</p>
-        <p>Notes on the work</p>
-      </li>
-      <li class="other-box">
-        <p>Something Else</p>
-        <p>some more words</p>
-      </li>
-    </ul>
+  <h1>Swinburne on Rails</h1>
+  <h2>A Critical Edition for the 21st century</h2>
+  <ul>
+    <li class="float-up edition-box">
+    <p>Critical Edition</p>
+    <p>Read the edition as Swinburne intended</p>
+    </li>
+    <li class="apparatus-box">
+    <p>Apparatus</p>
+    <p>Critical apparatus.</p>
+    </li>
+    <li class="float-up notes-box">
+    <p>Notes</p>
+    <p>Notes on the work</p>
+    </li>
+    <li class="other-box">
+    <% unless @swinburne_edition.nil? %>
+      <p><%= link_to @swinburne_edition.title, @swinburne_edition %></p>
+      <p>some more words</p>
+    <% end %>
+
+    </li>
+  </ul>
 
 </div>
 
+<div class="ag1">&nbsp;</div>
+<div class="get-started">
+  <h2>Ready to see the future?</h2>
+  <a href="#" class="button">Get Started</a>
+</div>
 
-  <div class="get-started">
-    <h2>Ready to see the future?</h2>
-    <a href="#" class="">Get Started</a>
-  </div>
 
 
-<% unless @swinburne_edition.nil? %>
-<p><%= link_to @swinburne_edition.title, @swinburne_edition %></p>
-<% end %>
