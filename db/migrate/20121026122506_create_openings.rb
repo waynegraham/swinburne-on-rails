@@ -13,6 +13,8 @@ class CreateOpenings < ActiveRecord::Migration
         t.text :verso_notes
         t.text :recto_notes
 
+        t.references :witness
+
         t.timestamps
       end
     end

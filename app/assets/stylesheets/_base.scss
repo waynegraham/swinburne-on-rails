@@ -6,9 +6,10 @@
 // ---------------------------------------------------------------------------
 // Basic Grid
 
-$total-columns  : 12;
-$column-width   : 4em;
-$gutter-width   : 1em;
+$total-columns  : 24;
+$column-width   : 3%;
+$gutter-width   : 1%;
 $grid-padding   : $gutter-width;
+$side-gutter-width: 0%;
 
 $show-grid-backgrounds  : true;

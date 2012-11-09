@@ -5,6 +5,8 @@ class CreateEditions < ActiveRecord::Migration
       t.string :title
       t.string :author
 
+      t.references :witness
+
       t.timestamps
     end
     say "Created Editions Table"

@@ -1,1 +1,2 @@
 web: bundle exec rails s -p $PORT
+/*guard: bundle exec guard*/

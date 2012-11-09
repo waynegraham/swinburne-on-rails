@@ -7,6 +7,8 @@
 <meta charset="utf-8">
 <title><%= title %></title>
 <meta name="viewport" content="width=device-width">
+<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500' rel='stylesheet' type='text/css'>
 <%= stylesheet_link_tag    "application", :media => "all" %>
 <%= javascript_include_tag "application" %>
 <%= csrf_meta_tags %>
@@ -14,18 +16,19 @@
 </head>
 <body>
 <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div class="page">
 
-<div id="container">
+<%= render 'layouts/header' %>
+
+<div class="container">
 
   <%= render 'layouts/flashmessages'%>
 
   <div id="main" role="main">
-    <%= render 'layouts/flashmessages'%>
-
     <%= yield %>
   </div>
-
- <%= render 'layouts/footer'%>
 </div>
+ <%= render 'layouts/footer'%>
+ </div>
 </body>
 </html>

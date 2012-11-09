@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20121026144415) do
   create_table "editions", :force => true do |t|
     t.string   "title"
     t.string   "author"
+    t.integer  "witness_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20121026144415) do
     t.integer  "recto_page_number"
     t.text     "verso_notes"
     t.text     "recto_notes"
+    t.integer  "witness_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end

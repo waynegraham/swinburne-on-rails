@@ -29,9 +29,9 @@ $linkColor: #08c !default;
 $linkColorHover: darken($linkColor, 15%) !default;
 
 // Typography
-$sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif
+$serifFontFamily: 'Goudy Bookletter 1911', Georgia, Times, serif
 !default;
-$serifFontFamily: Georgia, "Times New Roman", Times, serif !default;
+$sansFontFamily: 'Raleway', Helvetica, Arial, sans-serif !default;
 $monoFontFamily: Menlo, Monaco, Consolas, "Courier New", monospace
 !default;
 

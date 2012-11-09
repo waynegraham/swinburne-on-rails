@@ -34,6 +34,7 @@ namespace :convert do
         recto: recto.inner_html,
         verso_page_number: verso_page_number.to_s.to_i,
         recto_page_number: recto_page_number.to_s.to_i,
+        witness_id: 1
       )
 
     end
