@@ -22,18 +22,18 @@ namespace :convert do
     puts "Generating application openings..."
 
     openings.xpath('div[@class = "opening"]').each do |opening|
-      verso = opening.xpath('child::div[@class="verso"]')
-      recto = opening.xpath('child::div[@class="recto"]')
-      #running_title = opening.xpath('h1').text
-      verso_page_number = verso.xpath('span[@class="page_number"]').text
-      recto_page_number = recto.xpath('span[@class="page_number"]').text
+      verso = opening.xpath('div[@class="verso"]')
+      recto = opening.xpath('div[@class="recto"]')
+      running_title = openings.xpath('h1').text
+      verso_page_number = verso.xpath('span[@class="page_number"]').text.match(/\d+/)
+      recto_page_number = recto.xpath('span[@class="page_number"]').text.match(/\d+/)
 
-      puts "Converting pages #{verso_page_number} and #{verso_page_number}"
+      puts "Creating opening for pages #{verso_page_number} and #{recto_page_number}"
       Opening.create(
-        verso: verso,
-        recto: recto,
-        verso_page_number: verso_page_number,
-        recto_page_number: recto_page_number
+        verso: verso.inner_html,
+        recto: recto.inner_html,
+        verso_page_number: verso_page_number.to_s.to_i,
+        recto_page_number: recto_page_number.to_s.to_i,
       )
 
     end
