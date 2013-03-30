@@ -46,7 +46,7 @@ namespace :remote_file do
   desc 'Grab the latest TEI edition from github'
   task :fetch do
 
-    puts "Downloading latest version of the Swinburn edition from Github (master branch)"
+    puts "Downloading latest version of the Swinburne edition from Github (master branch)"
     puts "This will take a second..."
 
     uri = 'https://raw.github.com/nowviskie/Swinburne/master/xml/base.xml'
